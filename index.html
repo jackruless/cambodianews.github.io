@@ -2,558 +2,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	
+
+	
+	<meta charset="UTF-8">
   
-
-
-	<body>
-
-		<style>
-
-    body, html, ul, li{
-      margin: 0;
-      padding: 0;
-    }
-    .header{
-      width:100%;
-      height: 60px;
-      background: #0aa770;
-      border-bottom:1px solid #099e6a;
-    }
-    .header-container{
-      width:1190px;
-      height: 61px;
-      margin: auto;
-    }
-    .nav{
-      background: #0aa770;
-      height: 40px;
-      width:100%;
-    }
-    .hao123{
-      /*display: block;*/
-      float: left;
-      margin:12px 0;
-      cursor:pointer;
-    }
-    .haodaojiao{
-      float: left;
-      margin:12px 0;
-      cursor:pointer;
-    }
-    .header-sitemap{
-      float: left;
-/*      width:82px;
-      height:60px;*/
-      /*line-height: 60px;*/
-      margin-left: 5px;
-      opacity:0.8;
-      position: relative;
-    }
-      
-    .icon-grid{
-      float:left;
-      /*display: block;*/
-      margin-left: 10px;
-      margin-top: 23px;
-      width: 13px;
-      height:13px;
-      background: url("./icon-grid..png") ;
-    }
-    .header-sitemap a{
-    margin: 0 3px;
-    font-size: 18px;
-    color:#fff;
-    cursor:pointer;
-    line-height: 60px;
-    
-    }
-    .header-sitemap:hover{
-      cursor:pointer;
-      opacity:1.0;
-      background: rgba(17,136,96,.9);
-    }
-    .header-sitemap:hover .taggle {
-      display: block;
-    }
-    .icon-triangle {
-      float: right;
-      width: 0;
-      height: 0;
-     border: 3px solid white;
-/*     border-top-color: black;*/
-     border-bottom: none;           
-     border-left-color: transparent;
-     border-right-color: transparent;
-     margin-top: 30px;
-     margin-right: 8px;
-      }
-      .header-form{
-        width: 380px;
-        height:32px;
-        float: right;
-        margin-top: 12px;
-      }
-      .text{
-        float: left;
-        width:280px;
-        height:22px;
-        padding: 3px 2px;
-      }
-      .submit{
-      width: 80px;
-      height: 32px;
-      border:0;
-      padding: 0;
-      background:url("./search-submit..png"); 
-      background-color: #118860;
-      cursor: pointer;
-      }
-      .tools{
-        float:right;
-        width:232px;
-        height:60px;
-        font-size: 12px;
-        
-      }
-      .bear{
-        margin-right:5px;
-        margin-left:5px;
-      }
-      .phone{
-        margin-right:5px;
-      }
-      .qrcde:hover{
-        background: rgba(17,136,96,.9);
-        opacity:1.0;
-      }
-      .qrcde:hover .qrcode-img{
-        display: block;
-      }
-      .login{
-        float: left;
-        width:75px;
-        height:60px;
-        line-height: 60px;
-        cursor: pointer;
-        opacity:0.8;
-      }
-      .login a{
-        color:white;
-      }
-      .login:hover{
-        background: rgba(17,136,96,.9);
-        opacity:1.0;
-        text-decoration:underline;
-      }
-      .qrcde{
-        float: left;
-        width: 98px;
-        padding-top: 23px;
-        padding-left: 10px;
-        padding-right: 10px;
-        height:60px;
-        cursor: pointer;
-        color:white;
-        opacity:0.8;
-      }
-      .sethome{
-      float:left;
-      padding-top: 23px;
-      padding-left: 5px;
-      padding-right: 5px;
-      width:5px;
-      height: 60px;
-      margin-right: 15px;
-      cursor: pointer;
-      opacity:0.8;
-      /*background: url("./home.png");*/
-      }
-      
-      .qrcode-img{
-        display: none;
-        margin-top:0px;
-        margin-left: -10px;
-        width: 98px;
-        padding: 10px 10px;
-        background: rgba(17,136,96,.9);
-        text-align: center;
-        
-      }
-      .qrcode-img img{
-        width: 80px;
-        height: 80px;
-        margin:0 9px;
-      }
-      .nav-container{
-        height: 40px;
-        width:1190px;
-        margin:0 auto;
-        
-      }
-      .nav-container li{
-        display: inline-block;
-        height: 40px;
-        padding: 0 10px;
-        float: left;
-        line-height: 40px;
-        color: #fff;
-        font-size: 16px;
-        cursor: pointer;
-       
-      }
-      .nav-container li:hover{
-         background-color: #8fbc8f;
-         
-      }
-      .nav-container .selected{
-         background-color: #118860;
-         cursor: default;
-      }
-      .car{
-        width: 450px;
-        height: 40px;
-        float: left;
-      }
-      .content-top{
-        background: #f0f8ff;
-        height:345px;
-        width: 100%;
-        padding-top: 20px;
-        padding-left: 75px;
-      }
-      .content-left{
-        float: left;
-        width: 670px;
-        height: 300px;
-        background: #fff;
-      }
-      .content-bottom-left
-      {
-        float: left;
-        width: 915px;
-        height: 300px;
-        background: #fff;
-        margin-left: 75px;
-        margin-top: 20px;
-      }
-      .taps{
-      width: 124px;
-      height: 300px;
-      background-color: #0aa770;
-      float: left;
-      }
-      .content-left li{
-      list-style: none;
-      width: 124px;
-      height: 50px;
-      /*margin-left: 16px;*/
-      line-height: 50px;
-      font-size: 16px;
-      text-indent: 15px;
-      color: #fff;
-      cursor: pointer;
-      }
-      .content-left li:hover{
-        background-color: #fff;
-        color: #32cd32;
-        /*cursor: pointer;*/
-      }
-      .content-left .selected{
-        background-color: #fff;
-        color: #32cd32;
-        cursor: default;
-      }
-      .hide{
-        display: none;
-      }
-      .taggle{
-        display: none;
-        position: absolute;
-        width: 190px;
-        height: 356px;
-        font-size: 12px;
-        color:#fff;
-        background: rgba(17,136,96,.9);
-        padding: 15px;
-      }
-      .title{
-      height: 40px;
-      width: 33px;
-      font-size: 12px;
-      line-height: 20px;
-      top:0;
-      }
-      .taggle .first{
-        padding-top: 0;
-      }
-      .item{
-        position: relative;
-        width: 190px;
-        padding-top: 10px;
-        padding-bottom: 8px;
-        border-bottom: 1px solid #099e6a;
-      }
-      .item a{
-        height: 20px;
-        line-height: 20px;
-        display: inline-block;
-        text-align: center;
-        width: 40px;
-        white-space: nowrap;
-        color: #fff;
-        margin-bottom: 4px;
-        font-size: 5px;
-      }
-      .item a:hover{
-        text-decoration: underline;
-        background:#32cd32; 
-      }
-      /*.line{
-        border-bottom: 1px dashed #049a66;
-        width: 0px;
-        margin-left: 16px;
-      }*/
-      .content-right{
-        float: left;
-        margin-left: 45px;
-        width: 480px;
-        height: 300px;
-      }
-/*      .content-right-top{
-        width:480px;
-      }*/
-      .top-title{
-        display: block;
-        font-size: 22px;
-        font-family: "Microsoft Yahei";
-        line-height: 38px;
-        height: 38px;
-        color: #333;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-      .top-title:hover{
-        color:#32cd32;
-      }
-      .normal{
-        font-size: 14px;
-        font-family: Simsun;
-        color: #666;
-      }
-      .normal:hover{
-        text-decoration: underline;
-        color: #32cd32;
-        cursor: pointer;
-      }
-      .right-line{
-        margin: 0 10px;
-        width: 1px;
-        border-left: 1px solid #ccc;
-      }
-      .normal-a{
-        font-size: 14px;
-        font-family: Simsun;
-        line-height: 32px;
-        color: #666;
-        float: left;
-        height: 32px;
-        width: 220px;
-      }
-      .normal-a:hover{
-        text-decoration: underline;
-        color: #32cd32;
-        cursor: pointer;
-      }
-      .content-right-bottom{
-        height: 80px;
-        padding-top: 5px;
-      }
-      .line-mid{
-        margin: 20px 0;
-        width: 100%;
-        border-bottom:  1px solid #ccc;
-      }
-      .tap{
-        width:915px;
-        height:50px;
-        background: #0aa770;
-        margin-top: 5px;
-      }
-      .tap li{
-        list-style: none;
-        display: inline-block;
-        width: 72px;
-        height: 46px;
-        font-size: 16px;
-        font-family: "Microsoft YaHei";
-        line-height: 46px;
-        text-align: center;
-        color: #fff;
-        cursor: pointer;
-      } 
-      .tap .selected{
-        color: #333;
-        background: #fff;
-      }
-      .food-item{
-        padding: 15px 0;
-        height: 112px;
-        margin-top: 10px;
-        border-bottom: dashed 1px #eaeaea;
-      }
-      .food-item:hover{
-        background: #f0f8ff;
-      }
-      .local{
-        display: none;
-      }
-      .feed img{
-        width: 148px;
-        height: 110px;
-        border: solid 1px #e9e9e9;
-        float: left;
-      }
-      .item-r{
-        margin-left: 10px;
-      width: 700px;
-      height: 112px;
-      color: #999;
-      float: left;
-      }
-      .item-r .title{
-        height: 32px;
-        font-size: 22px;
-        font-family: "Microsoft Yahei";
-        line-height: 32px;
-        color: #333;
-      }
-      .item-r .intro{
-        display: block;
-        height: 48px;
-        font-size: 12px;
-        font-family: Simsun;
-        line-height: 24px;
-          }
-        .ad{
-          float: left;
-           margin-top: 25px;
-           margin-left: 20px;
-          }
-          .banner{
-            float: left;
-        width: 270px;
-        height: 150px;
-        border-top: 1px dashed #ccc;
-        border-bottom: 1px dashed #ccc;
-        margin-top: 10px;
-        margin-left: 20px;
-        background: #f4f4f4;
-          }
-          .youhui{
-            display: block;
-        border-radius: 20px;
-        background: #f94977;
-        color: #fff;
-        font-size: 14px;
-        width: 78px;
-        height: 30px;
-        text-align: center;
-        line-height: 30px;
-        margin:10px 0 0 10px;
-          }
-            
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-/* Style the header */
-header {
-  background-color:  #176;
-  padding: 30px;
-  text-align: center;
-  font-size: 40px;
-  color: yellow;
-}
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 500px; /* only for demonstration, should be removed */
-  background: rgba(187, 255, 204, 0.801);
-  padding: 20px;
-}
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #ace1a1;
-  height: 500px; /* only for demonstration, should be removed */
-}
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-
-			body{
-				text-align:center;
-			}
-			div{
-				text-align:center;
-				margin:0 auto;
-			}
-			a{
-				color:green;
-				font-size:18px;
-				text-decoration:none;
-			}
-			.kj_div{
-				width:200px;
-				float:left;
-				border:10px solid #ffffff;
-				background:#fca;
-			}
-			.dh_div{
-				float:left;
-				width:600px;
-				border:10px solid #ffffff;
-				background:#fca;
-			}
-			.main_div{
-				width:900px;
-				border:5px solid #ffffff;
-			}
-			hr{
-				color:red;
-				height:5px;
-				background:#000;
-			}
-			
-		</style>
-                
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="hexagons.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+  </head>
+	 
 		
     <style>body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}img{border:0}em,strong,th,b,i{font-style:normal;font-weight:400}ol,ul,dl{list-style:none}th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}input,textarea,select,button{font-family:inherit;font-size:inherit;font-weight:400;border-radius:0}img,input,label,button{vertical-align:middle}input:focus,button:focus,select:focus,textarea:focus{outline:0}a::-moz-focus-inner,input::-moz-focus-inner,button::-moz-focus-inner{border:0}button::-moz-focus-inner,input::-moz-focus-inner{padding:0}ins,s,u,del{text-decoration:none}
       /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:0;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
@@ -631,7 +89,11 @@ footer {
       .css_5fb5c83_60dc{height:88px}.layout-left .layout-left-title .tab .g-icon-redpoint{background-position:-196px 0px}.s-slider1 .g-slider-prev{background-position:-164px -25px}.s-slider1 .grid_hover .g-slider-prev{background-position:-164px -100px}.s-slider1 .grid_hover .g-slider-prev:hover{background-position:-164px -175px}.s-slider1 .g-slider-next{background-position:-164px -250px}.s-slider1 .grid_hover .g-slider-next{background-position:-164px -325px}.s-slider1 .grid_hover .g-slider-next:hover{background-position:-164px -400px}.s-slider2 .g-slider-prev{background-position:-174px -478px}.slider--nav-1 .slider__nav--prev{background-position:-174px -478px}.slider--nav-3 .slider__nav--prev{background-position:-171px -475px}.s-slider2 .g-slider-next{background-position:-174px -528px}.slider--nav-1 .slider__nav--next{background-position:-174px -528px}.slider--nav-3 .slider__nav--next{background-position:-171px -525px}.calendar2__lhl-yi{background-position:-185px -575px}.calendar2__lhl-ji{background-position:-185px -611px}.hao123-footer .tuiguang .icon{background-position:-186px -647px}.hao123-footer .beian .icon{background-position:-186px -682px}.hao123-footer .bottom-fawu .icon1{background-position:-185px -716px}.hao123-footer .bottom-fawu .icon2{background-position:-185px -752px}.hao123-footer .bottom-fawu .icon3{background-position:-185px -788px}.hao123-footer .mobile .icon{background-position:-187px -824px}.hotsearchCon .hotsearch-box .ctrlBtn{background-position:-188px -853px}.hotsearchCon .hotsearch-box .ctrlBtn:hover{background-position:-188px -878px}.hotsearchCon .hotsearch-box .ctrlBtn.select{background-position:-188px -903px}.hotsearchCon .hotsearch-box .ctrlBtn.select:hover{background-position:-188px -928px}.header__item--login .login .login__icon--user{background-position:-188px -958px}.header__item--login .login__icon--gift{background-position:-187px -990px}.mail__icon--more{background-position:-194px -1025px}.notice .slider__grid .slider__nav--next{background-position:-186px -1049px}.notice-fixed .gong-down .g_icon{background-position:-191px -1084px}.notice-fixed .g_icon_hot .g_icon{background-position:-185px -1114px}.pan__icon{background-position:-186px -1148px}.popup-confirm .popup-head a{background-position:-173px -1181px}.popup-confirm .popup-head a:hover{background-position:-173px -1210px}.g_tips-r .g_icon{background-position:-163px -1257px}.coolsiteresource_container{background-position:-60px -1315px}.siye .siye-icon{background-position:-181px -1437px}.siye .close-btn{background-position:-179px -1467px}.skin__slider-wrap .left-mask{background-position:-121px -1510px}.skin__slider-wrap .right-mask{background-position:-121px -1676px}.skin .g-skin-selected{background-position:-96px -1842px}.skin .g-imglink-bg{background-position:-96px -2008px}.skin .g-imglink-tag-new{background-position:-173px -2051px}.skin .g-imglink-tag-hot{background-position:-173px -2099px}.skin .g-imglink-tag-xuan{background-position:-183px -2147px}.skin .g-imglink-tag-selected b{background-position:-173px -2192px}.skin-wrapper .page-skinbtn .skinbtn__link{background-position:-182px -2240px}.skin-wrapper .page-skinbtn .skinbtn__eltip{background-position:-196px -2359px}.slider--nav-2 .slider__grid--hover .slider__nav--prev{background-position:-164px -2384px}.slider--nav-2 .slider__grid--hover .slider__nav--prev:hover{background-position:-164px -2459px}.slider--nav-2 .slider__nav--prev:hover{background-position:-164px -2459px}.slider--nav-2 .slider__grid--hover .slider__nav--next{background-position:-164px -2534px}.slider--nav-2 .slider__grid--hover .slider__nav--next:hover{background-position:-164px -2609px}.slider--nav-2 .slider__nav--next:hover{background-position:-164px -2609px}.slider--nav-2 .slider__nav--prev{background-position:-164px -2684px}.slider--nav-2 .slider__nav--next{background-position:-164px -2759px}.slider--nav-4 .slider__nav--prev{background-position:-175px -2834px}.slider--nav-4 .slider__nav--prev:hover{background-position:-175px -2914px}.slider--nav-4 .slider__nav--next{background-position:-175px -2994px}.slider--nav-4 .slider__nav--next:hover{background-position:-175px -3074px}.topzixun .rec-hotsearch .rec-close{background-position:-191px -3154px}.topzixun .rec-hotsearch .rec-close:hover{background-position:-191px -3183px}.topyingshi .rank{background-position:-187px -3211px}.weather2__static3{background-position:-167px -3246px}.weather2__today-icon{background-position:-182px -3300px}.weather2__tomorrow-icon{background-position:-182px -3339px}.weather-tips .weather-tips-tr{background-position:-194px -3378px}.headwise__icon{background-position:-189px -3403px}.headwise__pop-icon{background-position:-175px -3434px}.coolsites-wrapper .coolsitead-container .close{background-position:-191px -3481px}.coolsites-wrapper .coolsitead-container .adlist2 .item .re{background-position:-184px -3507px}.coolsites-wrapper .coolsitead-container .adlist2 .item .jian{background-position:-184px -3538px}.search .tabs-toggle .arrow{background-position:-192px -3575px}.search .tabs-toggle-open .arrow{background-position:-192px -3601px}.search .hotword-on{background-position:-183px -3627px}.sites2-wrapper .cls_bd .siteresource_container{background-position:-60px -3665px}.sites2-wrapper .site-manage{background-position:-169px -3787px}.sites2-wrapper .login-tip .tipclz{background-position:-189px -3828px}.sites2-wrapper .login-tip .tipclz:hover{background-position:-189px -3859px}.popup-site .item-added{background-position:-91px -3890px}.popup-site .item-normal:hover,.popup-site .item-add:hover{background-position:-91px -3933px}.popup-site-head .close{background-position:-178px -3976px}.popup-site-head .close:hover{background-position:-178px -4019px}.popup-site-self-sites .modify{background-position:-192px -4062px}.popup-site-self-sites .modify:hover{background-position:-192px -4102px}.popup-site-self-sites .delete{background-position:-186px -4142px}.popup-site-self-sites .delete:hover{background-position:-186px -4182px}.popup-site-hint-sug{background-position:-78px -4222px}.popup-site-hint-added{background-position:-89px -4277px}.popup-site-hint-noicon{background-position:-94px -4325px}.popup-site-hint-save{background-position:0px -4380px}.toplist .link .g_video i{background-position:-187px -4427px}.toplist .link .g_live i{background-position:-187px -4459px}.toplist .link .g_hot i{background-position:-188px -4490px}.toplist .link .t_icon i{background-position:-187px -4523px}.layout-left .layout-left-title .tab .g-icon-redpoint,.s-slider1 .g-slider-prev,.s-slider1 .grid_hover .g-slider-prev,.s-slider1 .grid_hover .g-slider-prev:hover,.s-slider1 .g-slider-next,.s-slider1 .grid_hover .g-slider-next,.s-slider1 .grid_hover .g-slider-next:hover,.s-slider2 .g-slider-prev,.slider--nav-1 .slider__nav--prev,.slider--nav-3 .slider__nav--prev,.s-slider2 .g-slider-next,.slider--nav-1 .slider__nav--next,.slider--nav-3 .slider__nav--next,.calendar2__lhl-yi,.calendar2__lhl-ji,.hao123-footer .tuiguang .icon,.hao123-footer .beian .icon,.hao123-footer .bottom-fawu .icon1,.hao123-footer .bottom-fawu .icon2,.hao123-footer .bottom-fawu .icon3,.hao123-footer .mobile .icon,.hotsearchCon .hotsearch-box .ctrlBtn,.hotsearchCon .hotsearch-box .ctrlBtn:hover,.hotsearchCon .hotsearch-box .ctrlBtn.select,.hotsearchCon .hotsearch-box .ctrlBtn.select:hover,.header__item--login .login .login__icon--user,.header__item--login .login__icon--gift,.mail__icon--more,.notice .slider__grid .slider__nav--next,.notice-fixed .gong-down .g_icon{background-image: url(https://gss2.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexnew/pkg/aio-all_z.b92d401.png)}.notice-fixed .g_icon_hot .g_icon,.pan__icon,.popup-confirm .popup-head a,.popup-confirm .popup-head a:hover,.g_tips-r .g_icon,.coolsiteresource_container,.siye .siye-icon,.siye .close-btn,.skin__slider-wrap .left-mask,.skin__slider-wrap .right-mask,.skin .g-skin-selected,.skin .g-imglink-bg,.skin .g-imglink-tag-new,.skin .g-imglink-tag-hot,.skin .g-imglink-tag-xuan,.skin .g-imglink-tag-selected b,.skin-wrapper .page-skinbtn .skinbtn__link,.skin-wrapper .page-skinbtn .skinbtn__eltip,.slider--nav-2 .slider__grid--hover .slider__nav--prev,.slider--nav-2 .slider__grid--hover .slider__nav--prev:hover,.slider--nav-2 .slider__nav--prev:hover,.slider--nav-2 .slider__grid--hover .slider__nav--next,.slider--nav-2 .slider__grid--hover .slider__nav--next:hover,.slider--nav-2 .slider__nav--next:hover,.slider--nav-2 .slider__nav--prev,.slider--nav-2 .slider__nav--next,.slider--nav-4 .slider__nav--prev,.slider--nav-4 .slider__nav--prev:hover,.slider--nav-4 .slider__nav--next,.slider--nav-4 .slider__nav--next:hover{background-image: url(https://gss2.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexnew/pkg/aio-all_z.b92d401.png)}.topzixun .rec-hotsearch .rec-close,.topzixun .rec-hotsearch .rec-close:hover,.topyingshi .rank,.weather2__static3,.weather2__today-icon,.weather2__tomorrow-icon,.weather-tips .weather-tips-tr,.headwise__icon,.headwise__pop-icon,.coolsites-wrapper .coolsitead-container .close,.coolsites-wrapper .coolsitead-container .adlist2 .item .re,.coolsites-wrapper .coolsitead-container .adlist2 .item .jian,.search .tabs-toggle .arrow,.search .tabs-toggle-open .arrow,.search .hotword-on,.sites2-wrapper .cls_bd .siteresource_container,.sites2-wrapper .site-manage,.sites2-wrapper .login-tip .tipclz,.sites2-wrapper .login-tip .tipclz:hover,.popup-site .item-added,.popup-site .item-normal:hover,.popup-site .item-add:hover,.popup-site-head .close,.popup-site-head .close:hover,.popup-site-self-sites .modify,.popup-site-self-sites .modify:hover,.popup-site-self-sites .delete,.popup-site-self-sites .delete:hover,.popup-site-hint-sug,.popup-site-hint-added{background-image: url(https://gss2.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexnew/pkg/aio-all_z.b92d401.png)}.popup-site-hint-noicon,.popup-site-hint-save,.toplist .link .g_video i,.toplist .link .g_live i,.toplist .link .g_hot i,.toplist .link .t_icon i{background-image: url(https://gss2.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexnew/pkg/aio-all_z.b92d401.png)}.layout-left .layout-left-title .tab.reload a:hover:after{background-position:0px 0px}.layout-left .layout-left-title .tab.reload a:after{background-position:0px -24px}.fixed-cont .hotsearch-refresh:hover::before{background-position:0px -48px}.fixed-cont .hotsearch-refresh::before{background-position:0px -72px}.layout-left .layout-left-title .tab.reload a:hover:after,.layout-left .layout-left-title .tab.reload a:after,.fixed-cont .hotsearch-refresh:hover::before,.fixed-cont .hotsearch-refresh::before{background-size: 16px 88px;background-image: url(https://gss2.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexnew/pkg/aio-all_0.4_z.5501eca.png)}.site-add-wraper .site-add-icon:hover:before{background-position:-74px 0px}.site-add-wraper .pop span[status=loading]:after{background-position:-74px 0px}.site-add-wraper .pop span[status=success]:after{background-position:-74px -26px}.site-add-wraper .pop span[status=fail]:after{background-position:-74px -52px}.site-add-wraper .pop .list-name:after{background-position:-78px -78px}.collection{background-position:-50px -94px}.collection:hover{background-position:-50px -144px}.collection.has-status{background-position:-50px -194px}.collection.has-status:hover{background-position:-50px -244px}.content-cover .spread:hover .arrow.down{background-position:-78px -294px}.content-cover .spread:hover .arrow.up{background-position:-78px -311px}.content-cover .spread .arrow.down{background-position:-78px -328px}.content-cover .spread .arrow.up{background-position:-78px -345px}.fixed-cont .hotsearch-box-list .icon-fall{background-position:-82px -362px}.fixed-cont .hotsearch-box-list .icon-rise{background-position:-82px -381px}.fixed-cont .hotsearch-box-list .icon-fair{background-position:-82px -400px}.shortcut-box .feed-btn i{background-position:-72px -419px}.shortcut-box .tip{background-position:0px -447px}.sites2-wrapper .cls_bd .site-item-add:hover i{background-position:-72px -485px}.sites2-wrapper .cls_bd .site-item-add i{background-position:-72px -513px}.site-add-wraper .site-add-icon:hover:before,.site-add-wraper .pop span[status=loading]:after,.site-add-wraper .pop span[status=success]:after,.site-add-wraper .pop span[status=fail]:after,.site-add-wraper .pop .list-name:after,.collection,.collection:hover,.collection.has-status,.collection.has-status:hover,.content-cover .spread:hover .arrow.down,.content-cover .spread:hover .arrow.up,.content-cover .spread .arrow.down,.content-cover .spread .arrow.up,.fixed-cont .hotsearch-box-list .icon-fall,.fixed-cont .hotsearch-box-list .icon-rise,.fixed-cont .hotsearch-box-list .icon-fair,.shortcut-box .feed-btn i,.shortcut-box .tip,.sites2-wrapper .cls_bd .site-item-add:hover i,.sites2-wrapper .cls_bd .site-item-add i{background-size: 90px 531px;background-image: url(https://gss2.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexnew/pkg/aio-all_0.5_z.789b74a.png)}.shortcut-box .top-btn i{background-position:0px 0px}.shortcut-box .back-btn i{background-position:0px -27px}.shortcut-box .feedback-btn i{background-position:0px -54px}.shortcut-box .top-btn i,.shortcut-box .back-btn i,.shortcut-box .feedback-btn i{background-size: 18px 72px;background-image: url(https://gss2.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexnew/pkg/aio-all_0.45_z.85f992e.png)}.small-topbe-wrapper #smallTopbeWrapper .be-content .topbe-big{background-position:0px 0px}.small-topbe-wrapper #smallTopbeWrapper .be-content .topbe-big{background-size: 15px 15px;background-image: url(https://gss2.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/her/static/indexnew/pkg/aio-all_0.9375_z.3ca061e.png)}
     </style>
     
-    <div class="layout-main"><div id="hao123-govsite" data-rm="server"><div class="g-grid g-bg11 g-br13 govsite-top" monkey="mingzhan-zfsitebar"><a class="g-gc title" href="https://khmer.voanews.com">ព័ត៌មានVOA</a><a class="g-gc" href="https://www.rfa.org/">RFAព័ត៌មាន</a><a class="g-gc" href="http://https://www.facebook.com/pg/CNN.NewsMedia/ads/">facebookព័ត៌មាន</a><a class="g-gc" href="http://km.rfi.fr/">RFIព័ត៌មាន</a><a class="g-gc" href="https://www.information.gov.kh/">បណ្តាញព័ត៌មានរបស់រដ្ឋាភិបាល</a><a class="g-gc" href="http://pressocm.gov.kh/">ព័ត៌មានរបស់រដ្ឋាភិបាល</a><a class="g-gc" href="https://www.mef.gov.kh/">សេដ្ឋកិច្ចនិងហិរញ្ញវត្ថុរបស់រដ្ឋាភិបាល</a><a class="g-gc" href="http://www.ce.cn/">中经网</a><a class="g-gc" href="http://www.gmw.cn/">光明网</a><a class="g-gc" href="http://www.cnr.cn/">央广网</a><a class="g-gc" href="http://www.qstheory.cn/">求是网</a><a class="g-gc" href="http://www.youth.cn/">中青网</a><a class="g-gc" href="http://www.cac.gov.cn/">网信网</a><a class="g-gc last" href="http://www.beijing.gov.cn/" monkey="prov">首都之窗</a></div>
+    <div class="layout-main"><div id="hao123-govsite" data-rm="server"><div class="g-grid g-bg11 g-br13 govsite-top" monkey="mingzhan-zfsitebar"><a class="g-gc title" href="https://khmer.voanews.com">ព័ត៌មានVOA</a><a class="g-gc" href="https://www.rfa.org/">RFAព័ត៌មាន</a><a class="g-gc" href="http://https://www.facebook.com/pg/CNN.NewsMedia/ads/">facebookព័ត៌មាន</a><a class="g-gc" href="http://km.rfi.fr/">RFIព័ត៌មាន </a><a class="g-gc" href="https://www.information.gov.kh/">បណ្តាញព័ត៌មានរបស់រដ្ឋាភិបាល</a>
+    </div>
+    <div class="layout-main"><div id="hao123-govsite" data-rm="server"><div class="g-grid g-bg11 g-br13 govsite-top" monkey="mingzhan-zfsitebar"><a class="g-gc" href="http://pressocm.gov.kh/">ព័ត៌មានរបស់រដ្ឋាភិបាល </a><a class="g-gc" href="https://www.mef.gov.kh/">សេដ្ឋកិច្ចនិងហិរញ្ញវត្ថុរបស់រដ្ឋាភិបាល</a><a class="g-gc" href="https://www.altaghyeer.info/ar/">صحيفة التغيير الإلكترونية | اكبر موقع اخباري في السودان</a>
+    <a class="g-gc" href="https://arabic.euronews.com/news/international">بار العالم - أخبار دولية وأخبار عاجلة </a><a class="g-gc" href="https://www.msn.com/ar-ae/news"> اخبار الامارات - أخبار عاجلة آخر الاخبار الوطن العربي، الشرق الاوسط</a></div>
+   
 
 
 
@@ -640,11 +102,10 @@ footer {
     <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>SSE-Switch-Search-Engine</title>
+  <title>البحث عن الاشياء العربية المضحكة</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style media="screen">
-
 body {
 margin:0px;
 text-align:center;
@@ -659,8 +120,8 @@ border-bottom:1px solid rgb(240, 8, 104)
 }
 .tablinks {
 width: 7%;
-margin-right: 8%;
-margin-left: 8%;
+margin-right: 5%;
+margin-left: 5%;
 text-decoration-style: none;
 background-color:rgb(238, 13, 69);
 border: 1px;
@@ -700,10 +161,10 @@ border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;
 }
 code {
-font-size: 1.5em;
-margin-top:90%;
+font-size: 0.1em;
+margin-top:100%;
 padding:2px;
-border-radius:10px;
+border-radius:1px;
 background-color:rgb(126, 238, 22);
 }
 @media only screen and (max-width: 20px) {
@@ -732,11 +193,11 @@ b {font-size: 2em;}
 </style>
 <body>
 <div id="engine-list">
-        <button onclick="show(event,'google')" class="tablinks"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Google-favicon-2015.png" alt="Google" width="50%"/></button><button onclick="show(event,'ddg')" class="tablinks"><img src="https://images.encyclopediadramatica.rs/2/2c/DDGlogo.png" alt="DuckDuckGo" width="50%"/></button><button onclick="show(event,'bing')" class="tablinks"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Bing_favicon.svg/1024px-Bing_favicon.svg.png" alt="Bing" width="50%"/></button><button onclick="show(event,'yahoo')" class="tablinks"><img src="https://www.yahoo.com/favicon.ico" alt="Yahoo" width="50%"/></button>
+        <button onclick="show(event,'google')" class="tablinks"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Google-favicon-2015.png" alt="Google" width="50%"/></button><button onclick="show(event,'ddg')" class="tablinks"><img src="https://images.encyclopediadramatica.rs/2/2c/DDGlogo.png" alt="DuckDuckGo" width="50%"/></button><button onclick="show(event,'bing')" class="tablinks"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Bing_favicon.svg/1024px-Bing_favicon.svg.png" alt="Bing" width="50%"/></button><button onclick="show(event,'yahoo')" class="tablinks"><img src="https://www.yahoo.com/favicon.ico" alt="Yahoo" width="70%"/></button>
 </div>
 <div id="google" class="engine">
   <div class="box">
-      <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" width="80%"/>
+      <img src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" width="60%"/>
       <form method=GET action="https://www.google.com/search">
           <input type="search" required autofocus autocomplete="off" placeholder="Search" name="q" class="input"/><button type="submit" class="submit"><i class="fa fa-search"></i></button>
       </form>
@@ -744,7 +205,7 @@ b {font-size: 2em;}
 </div>
 <div id="ddg" class="engine">
   <div class="box">
-      <img src="https://www.filecritic.com/wp-content/uploads/2016/01/DuckDuckGo-Logo.png" width="80%"/>
+      <img src="https://www.filecritic.com/wp-content/uploads/2016/01/DuckDuckGo-Logo.png" width="60%"/>
       <form method=GET action="https://www.duckduckgo.com/">
           <input type="search" required autofocus autocomplete="off" placeholder="Search" name="q" class="input"/><button type="submit" class="submit"><i class="fa fa-search"></i></button>
       </form>
@@ -752,7 +213,7 @@ b {font-size: 2em;}
 </div>
 <div id="bing" class="engine">
   <div class="box">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Bing_logo_%282016%29.svg/240px-Bing_logo_%282016%29.svg.png" width="80%"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Bing_logo_%282016%29.svg/240px-Bing_logo_%282016%29.svg.png" width="30%"/>
       <form method=GET action="https://www.bing.com/search">
           <input type="search" required autofocus autocomplete="off" placeholder="Search" name="q" class="input"/><button type="submit" class="submit"><i class="fa fa-search"></i></button>
       </form>
@@ -760,18 +221,17 @@ b {font-size: 2em;}
 </div>
 <div id="yahoo" class="engine">
   <div class="box">
-      <img src="https://fiu-assets-2-syitaetz61hl2sa.stackpathdns.com/static/use-media-items/15/14245/upto-700xauto/56fc6e1d/@2x/Yahoo_Logo_Purple.png" width="80%" style="border-radius:10px;"/>
+      <img src="https://fiu-assets-2-syitaetz61hl2sa.stackpathdns.com/static/use-media-items/15/14245/upto-700xauto/56fc6e1d/@2x/Yahoo_Logo_Purple.png" width="60%" style="border-radius:30px;"/>
       <form method=GET action="https://search.yahoo.com/search">
           <input type="search" required autofocus autocomplete="off" placeholder="Search" name="p" class="input"/><button type="submit" class="submit"><i class="fa fa-search"></i></button>
       </form>
   </div>
 </div>
-<div style="position:absolute;-moz-outline-radius-topleft:10%;width:70%;" id="info">
-    <code>{ ស្វាគមន៍ដោយប្រើម៉ាស៊ីនស្វែងរក។ សូមជ្រើសរើសម៉ាស៊ីនស្វែងរករបស់អ្នកពីខាងលើ }</code>
+<div style="position:absolute;-moz-outline-radius-topleft:6%;width:7%;" id="info">
+    <code></code>
 </div>
-<b style="position:absolute;left:0px;bottom:5px;color:rgba(0,0,0,0.5);width:100%;font-size:1.25em;">&lt;/&gt; </b>
 <script type="text/javascript">
-
+	
 function show(event, engineName) {
 navigator.vibrate(20);
   var i, tabcontent;
@@ -782,313 +242,591 @@ for (i = 0; i < tabcontent.length; i++) {
 document.getElementById('info').style.display = "none";
 }
 </script>
-</body>
-<hr>
-<hr>
-<hr>
+</body>   <body>
+		    	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143800569-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143800569-1');
+</script>
+	    
+	    <hr>
+	    
+	    
+	     <div class="layout-main"><div id="hao123-govsite" data-rm="server"><div class="g-grid g-bg11 g-br13 govsite-top" monkey="mingzhan-zfsitebar"><a class="g-gc" href="https://www.alarabiya.net/ar/latest-news">أخبار - العربية نت
+    </a><a class="g-gc" href="https://www.youtube.com/watch?v=CDjWay0iRYw">خبار عربية | وجوه شابة جديدة تتقلد مناصب مهمة بـ #السعودية - YouTube
+    </a><a class="g-gc" href="https://www.mc-doualiya.com">مونت كارلو الدولية MCD - أخبار عربية, أبراج, برامج متنوعة
+    </a><a class="g-gc last" href="https://arabic-media.com/arabicnews.htm
+    "> - الصحف و الجرائد باللغة العربية
+  </a><a class="g-gc last" href="https://arabic.sputniknews.com/
+  " >سبوتنيك عربي - أخبار عاجلة وتقارير: صور، فيديو ...
+</a></div>	   
+	    
+	    <hr>
+	 
+      <a href="https://jackruless.github.io/clothes.github.io/" class="first item0 item" title="أزياء الاتجاه"><img src="服装.jpg" data-hoverimg="https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2019-07-12/76ef24bddbbca9189c435b2053235b8a.png" height="90" width="120"></a>
+      <a href="https://jackruless.github.io/mobile.github.io/" class="first item0 item" title="المعدات الالكترونية"><img src="手机.jpg" data-hoverimg="https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2019-07-12/76ef24bddbbca9189c435b2053235b8a.png" height="90" width="120"></a>
+      <a href="http://creativelamp520.ga/" class="first item0 item" title="مجوهرات"><img src="珠宝.jpg" data-hoverimg="https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2019-07-12/76ef24bddbbca9189c435b2053235b8a.png" height="90" width="120"></a>
+      <a href="https://tinyurl.com/y6sfymc5" class="first item0 item" title="فن الرسم"><img src="阿拉伯.jpg" data-hoverimg="https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2019-07-12/76ef24bddbbca9189c435b2053235b8a.png" height="90" width="120"></a>
+	
+	      
+	      <hr>
+	    
+	   
 
-		
-				<div id="mh" style="text-align:left">
-					<span>门户:</span>
+
+	
+				<div id="xx" style="text-align:left">
+					<span><font color="red">فيديو:</font></span>
 					<span>&nbsp;</span>
-					<a href="http://www.sohu.com/">搜狐网</a>
-					<span>&nbsp;</span>
-					<a href="http://www.ifeng.com/">凤凰网</a>			
-					<span>&nbsp;</span>
-					<a href="http://www.sina.com.cn/">新浪网</a>			
-					<span>&nbsp;</span>
-				</div>
-				<div id="sp" style="text-align:left">
-					<span>视频:</span>
-					<span>&nbsp;</span>
-					<a href="http://www.bilibili.com">bilibili</a>
+					<a href="https://www.youtube.com/channel/UCXILxwbO6URUy2B8oC-nQIw
+          ">فيديو عربي </a>
 					<span>&nbsp;</span><!--页面空格标准，四个空格符号-->
-					<a href="http://www.youku.com/">优酷视频</a>
+					<a href="https://ar-ar.facebook.com/TRTArabi/videos">عربي- مقاطع الفيديو | فيسبوك</a>
 					<span>&nbsp;</span>
-					<a href="http://www.iqiyi.com/">爱奇异</a>
+					<a href="https://arabic.rt.com/videoclub">فيديوهات 
+          </a>
+          <a href="https://elcinema.com/video">مشاهدة فيدي- إعلانات الأفلام و المسلسلات و الأغاني - السينما
+</a>
+					<span>&nbsp;</span>
+					<a href="https://arabic-media.com/videoclip.htm
+          "> فيديو كليب 
+        </a>
+					<span>&nbsp;</span>
+					<a href="https://www.ra2ej.com">فيديو: ببغاء يصاحب مجموعة من الكلاب ويشاركهم نباحهم معتقداً أنه جرو!</a>
+          <span>&nbsp;</span>
+          <a href="https://www.eg.emb-japan.go.jp/major_policies/videos/index.html">مقاطع فيديو عن سياسة اليابان الخارجية
+          </a>
+					<span>&nbsp;</span>
+					<a href="https://ghdq8.com/?p=5803">الفيديو الاجتماعي</a>
+					<span>&nbsp;</span>
+					<a href="https://www.alalamtv.net/.../في-دقيقتين-عبدالله-الشريف-يفضح-خيانة-ح..<"ي دقيقتين..عبدالله الشريف يفضح خيانة حكام العرب! فيديو </a>
+					<span>&nbsp;</span>
 				</div>
 				<div id="xx" style="text-align:left">
-					<span>学习:</span>
+					<span><font color="red">دراسة:</font></span>
 					<span>&nbsp;</span>
-					<a href="http://www.runoob.com/">菜鸟教程</a>
+					<a href="https://www.sayidaty.net/category/tags">دراسة | مجلة سيدتي</a>
 					<span>&nbsp;</span>
-					<a href="http://www.imooc.com/">慕课网</a>
+					<a href="https://www.aljazeera.net/subsection/lateststudies">أحدث الدراسات</a>
 					<span>&nbsp;</span>
-					<a href="http://www.icoolxue.com/">爱酷学习网</a>
+					<a href="https://eddirasa.com">موقع الدراسة الجزائري | الموقع الأول للدراسة في الجزائر</a>
 					<span>&nbsp;</span>
-				</div>
-				<div id='xs' style="text-align:left">
-					<span>小说:</span>
+					<a href="https://rassd.com/199371.htm">دراسة أميركية: ليس بالضرورة شرب 2 لتر من الماء يوميًا – شبكة رصد ...
+</a>
 					<span>&nbsp;</span>
-					<a href="http://www.qidian.com/">起点中文网</a>
+					<a href="https://www.sayidaty.net">المخ بحاجة إلى 2.5 لتر ماء يومياً لتعزيز الذاكرة 
+</a>			
 					<span>&nbsp;</span>
-					<a href="http://www.zongheng.com/">纵横中文网</a>
+					<a href="https://www.baladnaelyoum.com"> الحياة اليوميةم</a>			
 					<span>&nbsp;</span>
-				</div>
+					<a href="https://mawdoo3.com">كيف تحب الدراسة - موضوع
+</a>
+					<span>&nbsp;</span>
+					<a href="https://books.google.com/books?id=N4RHCwAAQBAJ">دراسة اللغة في كتاب زاد المسير في عالم التفسير لابن الجوزي - الرسالة ...
+</a>			
+					<span>&nbsp;</span>
+					<a href="https://www.sustech.edu/ar/news/detail/2019/03/30/5863-%D8%AA%D9%86%D9%88%D9%8A%D9%87-%D8%A8%D8%AE%D8%B5%D9%88%D8%B5-%D8%A7%D9%84%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D8%B9%D9%86-%D8%A7%D8%B3%D8%AA%D8%A6%D9%86%D8%A7%D9%81-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9">أخبار الجامعة</a>			
+					<span>&nbsp;</span>		
+	    </div>
+				<div id='sp' style="text-align:left">
+					<span><font color="red">رواية:</font></span>
+					<span>&nbsp;</span>
+					<a href="https://ktaab.com/genre/novel">روايات - كتاب</a>
+					<span>&nbsp;</span>
+					<a href="https://midan.aljazeera.net">10 روايات أجمع عليها الأدباء والنقاد.. تعرف عليها - ميدان</a>
+					<span>&nbsp;</span>
+					<a href="https://www.riwaya.ga/jadid_maktaba2.html">جديد مكتبة رواية</a>
+					<span>&nbsp;</span>
+					<a href="https://ar.wikipedia.org/wiki/">قائمة_أفضل_مئة_رواية_عربية">قائمة أفضل مئة رواية عربية -</a>			
+					<span>&nbsp;</span>
+					<a href="https://www.fakera.com "› منوعات">روايات - موقع فكرة</a>			
+					<span>&nbsp;</span>
+					<a href="https://kolnovel.com"> رواية</a>
+					<span>&nbsp;</span>
+					<a href="الماكره ||روايه جريئه - شٰـيٰــٰـٌِ̐ـطٰـاٰنٰــﮬٰ̲̐ـہ - Wattpad">الماكره ||روايه جريئه - شٰـيٰــٰـٌِ̐ـطٰـاٰنٰــﮬٰ̲̐ـہ </a>			
+					<span>&nbsp;</span>
+					<a href="https://mawdoo3.com "› الآداب › متفرقات أدبية">تعريف الرواية - موضوع</a>			
+					<span>&nbsp;</span>
+	    
+	    </div>
 				<div id="sj" style="text-align:left">
-					<span>社交:</span>
+					<span><font color="red">شبكة اجتماعية:</font></span>
 					<span>&nbsp;</span>
-					<a href="https://tieba.baidu.com/">百度贴吧</a>
+					<a href="https://www.norlia.com/arabic_social_networks.htm">التواصل الاجتماعي العربي</a>			
 					<span>&nbsp;</span>
-					<a href="http://www.tianya.cn/">天涯社区</a>			
+					<a href="https://www.alemny.net/4883">موقع تواصل اجتماعي من حروف - موقع علمني
+</a>			
 					<span>&nbsp;</span>
-					<a href="https://bbs.deepin.org/">深度系统论坛</a>			
+					<a href="https://www.facebook.com">فيس بوك</a>			
 					<span>&nbsp;</span>
-				</div>
+					<a href="https://www.instagram.com/">الانستقرام</a>
+					<span>&nbsp;</span>
+					<a href="https://www.twitter.com/">تغريد</a>			
+					<span>&nbsp;</span>
+					<a href="https://www.linkedin.com">ينكدين</a>			
+					<span>&nbsp;</span>
+					<a href="https://www.rowadalaamal.com/مواقع-التواصل-الاجتماعي
+">مواقع التواصل الاجتماعي أفضل 23 موقع اجتماعي للتسجيل مباشرة 2018 ...</a>			
+					<span>&nbsp;</span>
+					<a href="https://dolphinuz.com/blog/single/45/%D9%85%D9%88%D8%A7%D9%82%D8%B9-%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A">مواقع وتطبيقات التواصل الاجتماعي الأكثر استخدامًا حول العالم | دولفينوس</a>			
+					<span>&nbsp;</span>	    
+	    </div>
 				<div id="gw" style="text-align:left">
-					<span>购物:</span>
+					<span><font color="red">التسوق:</font></span>
 					<span>&nbsp;</span>
-					<a href="https://www.taobao.com/">淘宝网</a>
+					<a href="https://cheapeasylife.ga/">رخيص
+حياة سهلة</a>
 					<span>&nbsp;</span>
-					<a href="https://www.jd.com/">京东商城</a>			
+					<a href="http://creativelamp520.ga/">المجوهرات بالجملة</a>			
 					<span>&nbsp;</span>
-					<a href="http://www.suning.com/">苏宁易购</a>			
+					<a href="https://jackruless.github.io/mobile.github.io/">الجملة المحمول</a>			
+					<span>&nbsp;</span>
+					<a href="https://tinyurl.com/y6sfymc5">بيع النفط الطلاء</a>			
 					<span>&nbsp;</span>
 				</div>
 				<div id="mail" style="text-align:left">
-					<span>邮箱:</span>
+					<span><font color="red">البريد الإلكتروني:</font></span>
 					<span>&nbsp;</span>
-					<a href="http://mail.126.com/">126邮箱</a>
+					<a href="https://support.google.com/accounts/answer/176347?co...hl=ar
+">البريد الإلكتروني</a>
 					<span>&nbsp;</span>
-					<a href="https://mail.qq.com/">QQ邮箱</a>			
+					<a href="https://mawdoo3.com/%D9%85%D8%A7_%D9%87%D9%88_%D8%A7%D9%84%D8%A8%D8%B1%D9%8A%D8%AF_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A">البريد الإلكتروني</a>			
 					<span>&nbsp;</span>
 				</div>
 				<div id="zb" style="text-align:left">
-					<span>直播:</span>
+					<span><font color="red">البنك العربي:</font></span>
 					<span>&nbsp;</span>
-					<a href="https://www.douyu.com/">斗鱼TV</a>
+					<a href="https://onlinebanking.anb.com.sa/RetailBank/app/logon.jsp?...en">لبنك العربي 
+</a>
 					<span>&nbsp;</span>
-					<a href="http://live.bilibili.com/">bilibili直播</a>			
-					<span>&nbsp;
-</span>
-				</div>
-
-				<div id="wp" style="text-align:left">
-
-					<span>网盘:</span>
-
+					<a href="https://www.arabbank.com.eg/ar
+">لبنك العربي - مصر: الصفحة الرئيسية
+</a>			
 					<span>&nbsp;</span>
-
-					<a href="http://pan.baidu.com/">百度网盘</a>
-
+					<a href="https://careers.anb.sa/ar">البنك العربي</a>
 					<span>&nbsp;</span>
+					<a href="https://www.souqalmal.com/sa-ar/anb
+">البنك العربي الوطني - تمويل - قروض - حسابات بنكية - بطاقات ائتمانية ...
+</a>
+					<span>&nbsp;</span>
+					<a href="https://www.anbinvest.com.sa/ar/Home
+"> الصفحة الرئيسية</a>
+					<span>&nbsp;</span>
+					<a href="https://www.arabi-online.net/cb/pages/jsp-ns/login-cons.jsp?request...ar...
+">لبنك العربي - عربي اون لاين
+</a>
+					<span>&nbsp;</span>
+					<a href="https://www.bank-of-algeria.dz/">البنك الجزائري</a>
+					<span>&nbsp;</span>
+					<a href="https://www.nbbonline.com/ar">بنك البحرين الوطني </a>
+					<span>&nbsp;</span>	
+					<a href="http://www.banquemisr.com/en">بنك مصر</a>
+					<span>&nbsp;</span>
+					<a href="https://www.cbi.iq">لبنك المركزي العراقي | الرئيسية</a>
+					<span>&nbsp;</span>
+					<a href="https://www.bankofjordan.com/ar">بنك الأردن | الصفحة الرئيسية</a>
+					<span>&nbsp;</span>
+					<a href="www.nbk.com/">استرجاع نقدي مضمون من اختيارك</a>
+					<span>&nbsp;</span>
+					<a href="http://www.bdl.gov.lb/">بنك لبناني</a>
+					<span>&nbsp;</span>
+					<a href="https://cbl.gov.ly/en/">البنك الليبي</a>
+					<span>&nbsp;</span>
+					<a href="http://www.bnm.mr/">بنك موريتانيا</a>
+					<span>&nbsp;</span>
+					<a href="www.bkam.ma/ar ">بنك مغربي</a>
+					<span>&nbsp;</span>
+					<a href="www.oman-arabbank.com/ar">بنك عمان</a>
+					<span>&nbsp;</span>
+					<a href="https://www.bankofpalestine.com/ar/online-banking">بنك فلسطيني</a>
+					<span>&nbsp;</span>
+					<a href="https://www.qnb.com/cs/Satellite/QNBGlobal/en/enGlobalHome">بنك قطر</a>
+					<span>&nbsp;</span>
+					<a href="http://www.cbs-bank.sy/">البنك السوري</a>
+					<span>&nbsp;</span>
+					<a href="http://www.bt.com.tn/bt-en-ligne-ar-banque-a-distance">البنك التونسي</a>
+					<span>&nbsp;</span>
+					<a href="https://www.centralbank.ae/">بنك الامارات العربية المتحدة</a>
+					<span>&nbsp;</span>
+					<a href="http://www.sahara-developpement.com/%D8%A7%D9%84%D8%B5%D8%AD%D8%B1%D8%A7%D8%A1-%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%D9%8A%D8%A9/SecteurBancaire-607.aspx">بنك الصحراء الغربية</a>
+					<span>&nbsp;</span>
+					<a href="https://ibyemen.com/">بنك اليمن</a>
+					<span>&nbsp;</span>
+					<a href="http://arabdevelopmentportal.com/ar/country/%D8%AC%D8%B2%D8%B1-%D8%A7%D9%84%D9%82%D9%8F%D9%85%D8%B1">جزر القمر
+مصرف</a>
+					<span>&nbsp;</span>
+					<a href="http://salaamsombank.com/pages.php">البنك الصومالي</a>
+					<span>&nbsp;</span>
+					<a href="www.cacintbank.com">بنك جيبوتي</a>
+					<span>&nbsp;</span>		    
+	    
+	    </div>
 
-				</div>
+				
 
 
 				<div id="ky" style="text-align:left">
 
-					<span>开源相关:</span>
+					<span><font color="red">تقنية:</font></span>
 
 					<span>&nbsp;</span>
 
-					<a href="https://git.oschina.net/">码云</a>
+					
+					<a href="https://www.stackoverflow.com/">ستاكوفيرفلوو</a>
+					<span>&nbsp;</span>
+					<a href="https://github.com/">جيثب</a>
+					<span>&nbsp;</span>
+					<a href="https://www.youtube.com/watch?v=GsmZmqYEgN0">اردوينو</a>
+					<span>&nbsp;</span>		
+		     </div>
+	    
+				<div id="ky" style="text-align:left">
+
+					<span><font color="red">الجنس مضحك:</font></span>
 
 					<span>&nbsp;</span>
-					<a href="https://www.oschina.net/">开源中国</a>
+
+					
+					<a href="https://www.pornhub.com/">حدث مضحك</a>
 					<span>&nbsp;</span>
-					<a href="https://github.com/">GitHub</a>
+					<a href="https://www.fuq.com/">فتاه مرحهه</a>
+					<span>&nbsp;</span>
+					<a href="https://www.youporn.com/">مضحك</a>
+					<span>&nbsp;</span>
+					<a href="https://www.xvideos.com/c/Arab-159
+">فتيات عرب مضحكات</a>
+					<span>&nbsp;</span>
+					
+					<a href="https://www.youporn.com/category/119/arab/
+">حدث عربي مضحك</a>
+					<span>&nbsp;</span>
+					<a href="https://www.fulltube.xxx/categories/530/arab
+">زوجين عرب مضحكين</a>
+					<span>&nbsp;</span>	
+					
+					<a href="https://www.pornhub.com/video?c=98
+">مضحك</a>
+					<span>&nbsp;</span>
+					<a href="https://www.porndroids.com/category/arab-porn/
+">اصنع حب مضحك</a>
+					<span>&nbsp;</span>					
+	    </div>	    	    
+	    
+				<div id="ky" style="text-align:left">
+
+					<span><font color="red">الجيش:</font></span>
+
+					<span>&nbsp;</span>
+
+					
+					<a href="https://ar.wikipedia.org/wiki/جيش
+">جيش - ويكيبيديا، الموسوعة الحرة</a>
+					<span>&nbsp;</span>
+					<a href="https://www.mdn.dz/site_principal/index.php?L=ar">وزارة الدفاع الـوطني - الجزائر -</a>
+					<span>&nbsp;</span>
+					<a href="https://www.lebarmy.gov.lb">موقع الرسمي للجيش اللبناني | شرف، تضحية، وفاء.
+</a>
+					<span>&nbsp;</span>
+					<a href="https://www.ennaharonline.com/إستحداث-مصلحة-مركزية-للشرطة-ال...
+">إستحداث مصلحة مركزية للشرطة القضائية لأمن الجيش — النهار أونلاين
+</a>
+					<span>&nbsp;</span>
+					<a href="https://www.alalamtv.net/.../شاهد-ايران-تستعرض-قدراتها-العسكرية..">شاهد: ايران تستعرض قدراتها العسكرية في يوم الجيش - قناة العالم الاخبارية
+</a>
+					<span>&nbsp;</span>
+					<a href="sdarabia.com/tag/الجيش-السعودي/
+">الجيش السعودي Archives | SDArabia
+</a>
+					<span>&nbsp;</span>
+					<a href="https://arabic.sputniknews.com/.../organization_55a8e7f8b4a1b098...
+">لجيش السعودي</a>
+					<span>&nbsp;</span>
+					<a href="https://akhbaar24.argaam.com/article/listbytags/.../الجيش-السعودي/1
+">خبار ساخنة | الجيش السعودي - صفحة 1 - اخبار 24 - ارقام
+</a>
 					<span>&nbsp;</span>
 				</div>
+	    
+                                <div id="gw" style="text-align:left">
+					<span><font color="red">اعمال:</font></span>
+					<span>&nbsp;</span>
+					<a href="https://arabicyp.us/sanindex.html/">الصفحات الصفراء العربية</a>
+					<span>&nbsp;</span>
+					<a href="https://yellowpagegulf.com/">يلو بيج الخليج دليل الأعمال من المملكة العربية السعودية والكويت والإمارات ...</a>			
+					<span>&nbsp;</span>
+					<a href="https://www.arabamerica.com/business/arabic-yellow-pages/
+">الصفحات الصفراء العربية - الأعمال - أمريكا العربية</a>			
+					<span>&nbsp;</span>
+					<a href="https://arab.dazzleyellowpages.com/
+">الصفحات الصفراء العربية - دليل الأعمال ورقم الهاتف المحلي </a>			
+					<span>&nbsp;</span>
+					<a href="https://www.yellowpages.com/arab-al
+">الصفحات الصفراء الحقيقية</a>
+					<span>&nbsp;</span>
+					<a href="https://www.saudianyellowpages.com/">الصفحات الصفراء السعودية ::: الصفراء السعودية ::: المملكة العربية السعودية ...</a>
+					<span>&nbsp;</span>
+					<a href="https://www.yellowpages.ae/">الإمارات العربية المتحدة دليل الأعمال التجارية عبر الإنترنت من قبل الصفحات الصفراء اتصالات</a>
+					<span>&nbsp;</span>
+				</div>
+	    
+	    <div id="sj" style="text-align:left">
+					<span><font color="red">عرض حي على نفسك:</font></span>
+					<span>&nbsp;</span>
+					<a href="https://7nujoomlive-stream-video-chat.en.uptodown.com/android">النجوم
+حي</a>			
+					<span>&nbsp;</span>
+					
+					<a href="https://en.uptodown.com/android/search/bigo+live">بيغو لايف</a>			
+					<span>&nbsp;</span>
+					<a href="https://uplive.en.uptodown.com/android">حتى العيش</a>
+					<span>&nbsp;</span>
+					<a href="https://en.uptodown.com/android/search/live+me">عشني</a>			
+					<span>&nbsp;</span>
+					<a href="https://yome-live.en.uptodown.com/android">يوم يعيش</a>			
+					<span>&nbsp;</span>	 
+		    
+		  
+	    </div>
+		     
+		     
+		     
 
-			</div>
-
-		</div>
-
+          <div id="sj" style="text-align:left">
+					<span><font color="red">موسيقى:</font></span>
+					<span>&nbsp;</span>
+		  <a href="https://www.youtube.com/watch?v=ppLl_sosdv8">الموسيقى العربية التقليدية </a>			
+					<span>&nbsp;</span>
+					<a href="http://www.arabsounds.net/arab-top-20/">موقع أعلى 20</a>
+					<span>&nbsp;</span>
+					<a href="https://open.spotify.com/user/redmusiccompany/playlist/76g51LQu3sM1HOxD6Jbo26">أغاني عربية جديدة 2019 - أفضل موسيقى عربية 2019 على سبوتيفي</a>			
+					<span>&nbsp;</span>
+					<a href="https://www.aghanyna.net/english/tag/download-arabic-music-2019/">تحميل الموسيقى العربية 2019</a>			
+					<span>&nbsp;</span>	    </body>
 
   
 </head>
 <style>
-        * {
-          box-sizing: border-box;
-        }
-        body {
-          font-family: Arial, Helvetica, sans-serif;
-        }
-        /* Style the header */
-        header {
-          background-color:  #176;
-          padding: 10px;
-          text-align: center;
-          font-size: 10px;
-          color: yellow;
-        }
-        /* Create two columns/boxes that floats next to each other */
-        nav {
-          float: left;
-          width: 30%;
-          height: 40px; /* only for demonstration, should be removed */
-          background: rgba(187, 255, 204, 0.801);
-          padding: 5px;
-        }
-        /* Style the list inside the menu */
-        nav ul {
-          list-style-type: none;
-          padding: 0;
-        }
-        article {
-          float: left;
-          padding: 5px;
-          width: 70%;
-          background-color: #ace1a1;
-          height: 40px; /* only for demonstration, should be removed */
-        }
-        /* Clear floats after the columns */
-        section:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-        /* Style the footer */
-        footer {
-          background-color: #777;
-          padding: 10px;
-          text-align: center;
-          color: white;
-        }
-        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-        @media (max-width: 600px) {
-          nav, article {
-            width: 100%;
-            height: auto;
-          }
-        }
-        </style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Style the header */
+header {
+  background-color:  #c1b1c1;
+  padding: 30px;
+  text-align: center;
+  font-size: 15px;
+  color: yellow;
+}
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 200px; /* only for demonstration, should be removed */
+  background: #fbc;
+  padding: 20px;
+}
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #c1f1a1;
+  height: 200px; /* only for demonstration, should be removed */
+}
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the footer */
+footer {
+  background-color: #477;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
         </head>
         <body>
         
         <header>
-          <h1>wholesale silver jewelry</h1>
-        </header>
+         <a href="https://jackruless.github.io/paintingruio-github.co/"><h1>تخصيص -شراء أي من اللوحة من هذا الموقع
+
+  مقابل 10000 دولار لكل منها ، إذا حصلت عليها ، يرجى الاتصال بنا!--------اللوحة العربية</h1></a>
         
         <section>
                 <nav>
               
             <ul>
-                <a href="https://cheapeasylife.ga/index.php/characteristics-and-uses-of-silver/"><h2>uses of silver</h2></a>
+                <a href="https://cheapeasylife.ga/index.php/%d8%ae%d8%b5%d8%a7%d8%a6%d8%b5-%d9%88%d8%a7%d8%b3%d8%aa%d8%ae%d8%af%d8%a7%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d9%81%d8%b6%d8%a9/"><h4>استخدامات الفضة---------شراء الذهب والماس وجميع أنواع الأحجار الكريمةيرجى الاتصال بنا على
+
+ruiojack520@gmail.com</h4></a>
         
             </ul>
         </nav>
           
           <article>
               <ul>
-            <h3><font color="red"> <a href="https://mailchi.mp/6ac39cc1001e/study123">ភាសាអង់គ្លេសផែនការសិក្សា,ចាប់ផ្តើមរៀនដើម្បីបង្កើតវេបសាយនិងកម្មវិធីដំបូង</a></font></h3>
+             <font color="red"> <a href="https://mailchi.mp/cd012f00c8fd/789"><h3>يرجى أن تكون عضويتنا والتسجيل في الجزء السفلي من هذه الصفحة ، سوف تحصل على منتجات الجملة الأصلية من أي من مصانع الصين!<h3></a></font>
+		                  <font color="yellow"> <a href="https://taobao.com"><h3>انقر هنا للحصول على منتجات الصين ومنتجات الجملة!<h3></a></font>
+				<font color="yellow"> <a href="https://1688.com"><h3>انقر هنا للحصول على منتجات الصين ومنتجات الجملة!<h3></a></font>
+		<font color="yellow"> <a href="https://jd.com"><h3>انقر هنا للحصول على منتجات الصين ومنتجات الجملة!<h3></a></font>
+			</ul>
+ 
+	
+      <footer>
+        <div class="footer">
+            <div><a href="#">خدمة البريد الإلكتروني:-شركة مجوهرات كبيرة من الصين تشتري الذهب والماس والأحجار الكريمة--Service contact:</a></div>
+            <div><a href="mailto:contacto@gmail.com">ruiojack520@gmail.com</a></div>
+        </div>
+    </footer>	
+		
+		
+		
         </ul>
           </article>
         </section>
-        
-        <hr>
 		
-				<div id="mh" style="text-align:left">
-                        <span>门户:</span>
-                        <span>&nbsp;</span>
-                        <a href="http://www.sohu.com/">搜狐网</a>
-                        <span>&nbsp;</span>
-                        <a href="http://www.ifeng.com/">凤凰网</a>			
-                        <span>&nbsp;</span>
-                        <a href="http://www.sina.com.cn/">新浪网</a>			
-                        <span>&nbsp;</span>
-                    </div>
-                    <div id="sp" style="text-align:left">
-                        <span>视频:</span>
-                        <span>&nbsp;</span>
-                        <a href="http://www.bilibili.com">bilibili</a>
-                        <span>&nbsp;</span><!--页面空格标准，四个空格符号-->
-                        <a href="http://www.youku.com/">优酷视频</a>
-                        <span>&nbsp;</span>
-                        <a href="http://www.iqiyi.com/">爱奇异</a>
-                    </div>
-                    <div id="xx" style="text-align:left">
-                        <span>学习:</span>
-                        <span>&nbsp;</span>
-                        <a href="http://www.runoob.com/">菜鸟教程</a>
-                        <span>&nbsp;</span>
-                        <a href="http://www.imooc.com/">慕课网</a>
-                        <span>&nbsp;</span>
-                        <a href="http://www.icoolxue.com/">爱酷学习网</a>
-                        <span>&nbsp;</span>
-                    </div>
-                    <div id='xs' style="text-align:left">
-                        <span>小说:</span>
-                        <span>&nbsp;</span>
-                        <a href="http://www.qidian.com/">起点中文网</a>
-                        <span>&nbsp;</span>
-                        <a href="http://www.zongheng.com/">纵横中文网</a>
-                        <span>&nbsp;</span>
-                    </div>
-                    <div id="sj" style="text-align:left">
-                        <span>社交:</span>
-                        <span>&nbsp;</span>
-                        <a href="https://tieba.baidu.com/">百度贴吧</a>
-                        <span>&nbsp;</span>
-                        <a href="http://www.tianya.cn/">天涯社区</a>			
-                        <span>&nbsp;</span>
-                        <a href="https://bbs.deepin.org/">深度系统论坛</a>			
-                        <span>&nbsp;</span>
-                    </div>
-                    <div id="gw" style="text-align:left">
-                        <span>购物:</span>
-                        <span>&nbsp;</span>
-                        <a href="https://www.taobao.com/">淘宝网</a>
-                        <span>&nbsp;</span>
-                        <a href="https://www.jd.com/">京东商城</a>			
-                        <span>&nbsp;</span>
-                        <a href="http://www.suning.com/">苏宁易购</a>			
-                        <span>&nbsp;</span>
-                    </div>
-                    <div id="mail" style="text-align:left">
-                        <span>邮箱:</span>
-                        <span>&nbsp;</span>
-                        <a href="http://mail.126.com/">126邮箱</a>
-                        <span>&nbsp;</span>
-                        <a href="https://mail.qq.com/">QQ邮箱</a>			
-                        <span>&nbsp;</span>
-                    </div>
-                    <div id="zb" style="text-align:left">
-                        <span>直播:</span>
-                        <span>&nbsp;</span>
-                        <a href="https://www.douyu.com/">斗鱼TV</a>
-                        <span>&nbsp;</span>
-                        <a href="http://live.bilibili.com/">bilibili直播</a>			
-                        <span>&nbsp;
-    </span>
-                    </div>
-    
-                    <div id="wp" style="text-align:left">
-    
-                        <span>网盘:</span>
-    
-                        <span>&nbsp;</span>
-    
-                        <a href="http://pan.baidu.com/">百度网盘</a>
-    
-                        <span>&nbsp;</span>
-    
-                    </div>
-    
-    
-                    <div id="ky" style="text-align:left">
-    
-                        <span>开源相关:</span>
-    
-                        <span>&nbsp;</span>
-    
-                        <a href="https://git.oschina.net/">码云</a>
-    
-                        <span>&nbsp;</span>
-                        <a href="https://www.oschina.net/">开源中国</a>
-                        <span>&nbsp;</span>
-                        <a href="https://github.com/">GitHub</a>
-                        <span>&nbsp;</span>
-                    </div>
-    
+		
+		
+    <body>
+ <ul id="hexGrid">
+      <li class="hex">
+        <div class="hexIn">
+          <a class="hexLink" href="#">
+            <img src="纯银1.jpg" alt="" />
+		  <h1>اشتري هنا cheapeasylife.ga<h1>  
+            <p>جوهرة الفضة</p>
+          </a>
+        </div>
+      </li>
+ 
+      <li class="hex">
+        <div class="hexIn">
+          <a class="hexLink" href="#">
+            <img src="纯银3.jpg" alt="" />
+            <h1>اشتري هنا cheapeasylife.ga<h1>  
+            <p>جوهرة الفضة</p>
+          </a>
+        </div>
+      </li>
+      <li class="hex">
+        <div class="hexIn">
+          <a class="hexLink" href="#">
+            <img src="纯银9.jpg" alt="" />
+            <h1>اشتري هنا cheapeasylife.ga<h1>  
+         <p>جوهرة الفضة</p>
+          </a>
+        </div>
+      </li>
+      <li class="hex">
+        <div class="hexIn">
+          <a class="hexLink" href="#">
+            <img src="纯银11.jpg" alt="" />
+            <h1>اشتري هنا cheapeasylife.ga<h1>  
+                    <p>جوهرة الفضة</p>
+          </a>
+        </div>
+      </li>
+      <li class="hex">
+        <div class="hexIn">
+          <a class="hexLink" href="#">
+            <img src="纯银12.jpg" alt="" />
+            <h1>اشتري هنا cheapeasylife.ga<h1>  
+                    <p>جوهرة الفضة</p>
+          </a>
+        </div>
+      </li>    
+	  </ul>
+  </body>    
+	      
+
+    <section >
+	    		<a href="https://cheapeasylife.ga/%d8%b3%d9%8a%d9%89-%d9%8a%d8%b1%d9%8a%d8%af-%d8%a7%d9%84%d8%a3%d8%b2%d9%88%d8%a7%d8%ac-%d8%a7%d9%84%d9%83%d9%86%d8%af%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%b0%d9%87%d8%a7%d8%a8-%d8%a5%d9%84%d9%89-%d8%a7/"><h2> يى! يريد الأزواج الكنديون الذهاب إلى الصين لمشاهدة سور الصين العظيم ، لكن وكالة السفر الصينية تضيع عليهم.</h2> </a> 
+	    		<a href="https://cheapeasylife.ga/%d8%b3%d9%8a%d9%89-%d9%8a%d8%b1%d9%8a%d8%af-%d8%a7%d9%84%d8%a3%d8%b2%d9%88%d8%a7%d8%ac-%d8%a7%d9%84%d9%83%d9%86%d8%af%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%b0%d9%87%d8%a7%d8%a8-%d8%a5%d9%84%d9%89-%d8%a7/"><h2> سيى! يريد الأزواج الكنديون الذهاب إلى الصين لمشاهدة سور الصين العظيم ، لكن وكالة السفر الصينية تضيع عليهم.
+ منذ 3 أيام ، ابحث عن تشوتشو
+ الصين بلد جميل للغاية ، حيث الجبال والبحيرات والجبال والأنهار الجميلة تجذب الآلاف من السياح الأجانب كل عام. هناك غناء غنائي جيدًا: "السور العظيم لنهر اليانغتسي ، نهر هوانغشان الأصفر ، أنا ثقيل في قلبي …"</h2> </a> 
+<div class="card_container">
+            <div class="card_wrapper">
+                <div class="card_image">
+                    <img src="阿拉伯2.jpg"/600x600 width="900" hight="550" border="6" alt="">
                 </div>
-    
+
             </div>
-      </div>
+	                	<a href="https://cheapeasylife.ga/%D8%B3%D8%B1-%D8%A3%D9%86%D8%AA-%D9%84%D8%A7-%D8%AA%D8%B9%D8%B1%D9%81-%D8%A7%D9%84%D8%B7%D8%B1%D9%8A%D9%82%D8%A9-%D8%A7%D9%84%D8%AA%D9%8A-%D8%AA%D9%86%D8%AC%D9%88-%D9%85%D9%86%D9%87%D8%A7-%D9%82/"><h2>سر: أنت لا تعرف الطريقة التي تنجو منها قوى الشر والشر في بلدة المقاطعة.—أخبار الصين     </h2> </a>  			
+	<a href="https://cheapeasylife.ga/%d8%b3%d8%b1-%d8%a3%d9%86%d8%aa-%d9%84%d8%a7-%d8%aa%d8%b9%d8%b1%d9%81-%d8%a7%d9%84%d8%b7%d8%b1%d9%8a%d9%82%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%86%d8%ac%d9%88-%d9%85%d9%86%d9%87%d8%a7-%d9%82/"><h2>ع تعميق المعركة ضد الشر ، تم حفر المزيد والمزيد من قوات المقاطعة السوداء والشر والقضايا القديمة. بينما نتعجب من البيئة الاجتماعية للمقاطعة ، نحن أيضًا مهتمون بكيفية عمل القوى المظلمة في المقاطعة وبقائها. هذه المقالة هي سلسلة مدينة مقاطعة أخرى لا تعرفها. </h2> </a>    			
+					<div class="card_wrapper">
+                <div class="card_image">
+                    <img src="阿拉伯1.jpg"/600x600 width="900" hight="550" border="6" alt="">
+              
+                </div>
+		    
+               </div>
+                		<a href="https://cheapeasylife.ga/%d9%83%d9%8a%d9%81-%d8%aa%d9%86%d8%aa%d8%ac-%d8%a7%d9%84%d9%8a%d8%b9%d8%b3%d9%88%d8%a8-%d8%a7%d9%84%d8%a8%d9%8a%d8%b6/"><h2> كيف تنتج اليعسوب البيض </h2> </a>
+		<a href="https://cheapeasylife.ga/%d9%83%d9%8a%d9%81-%d8%aa%d9%86%d8%aa%d8%ac-%d8%a7%d9%84%d9%8a%d8%b9%d8%b3%d9%88%d8%a8-%d8%a7%d9%84%d8%a8%d9%8a%d8%b6/"><h2>هناك طريقتان لتفرخ البيض. الأنواع مع بيض البيض المتقدمة تنتج البيض في أو على الأنسجة النباتية في الماء أو على الماء. يصعد البعض إلى السطح لوضع البيض ويمكن أن يغطس في الماء لأكثر من ساعة واحدة.</h2> </a>            </div>
+            	
+		    <div class="card_wrapper">
+                <div class="card_image">
+                    <img src="阿拉伯4.jpg"/600x600 width="900" hight="550" border="6" alt="">
+                </div>
+		    </section>
+		    
+		    
+
+	    
+	    </body>
+	      
+	      <!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://qq.us3.list-manage.com/subscribe/post?u=98ad187716f8c1cc8358a9131&amp;id=c8c92b0925" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2><font color="blue">Kindly leave your email and name if you want to talk to any of our waiter.إذا كنت تريد التحدث إلى أي نادل ، فالرجاء ترك البريد الإلكتروني ورقم الهاتف.</font></h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL"><font color="blue">Email Address </font> <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-FNAME"><font color="blue"> Your Name and Question</font></label>
+	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_98ad187716f8c1cc8358a9131_c8c92b0925" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
-
-<script src="./hao123.js"></script>
-</body>
-
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->	
+	      
 </html>
